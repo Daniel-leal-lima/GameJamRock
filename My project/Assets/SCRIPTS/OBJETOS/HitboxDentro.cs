@@ -10,5 +10,7 @@ public class HitboxDentro : MonoBehaviour
         //Debug.Log("Não pode mais");
         membro.SetPodeBater(false);
         membro.TomaDano();
+        membro.objtsNoRaio.Remove(collision.gameObject);
+        Destroy(collision.gameObject);
     }
 }

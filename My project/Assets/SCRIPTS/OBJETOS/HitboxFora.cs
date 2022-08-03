@@ -10,5 +10,6 @@ public class HitboxFora : MonoBehaviour
     {
         //Debug.Log("Pode bater");
         membro.SetPodeBater(true);
+        membro.objtsNoRaio.Add(collision.gameObject);
     }
 }

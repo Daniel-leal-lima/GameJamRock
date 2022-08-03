@@ -13,6 +13,7 @@ public class Membro : MonoBehaviour
     bool podeBater;
     bool interagiu;
     string botao;
+    public HashSet<GameObject> objtsNoRaio = new HashSet<GameObject>();
     private void Start()
     {
         switch (selIndex)
@@ -44,10 +45,18 @@ public class Membro : MonoBehaviour
 
     void Interage()
     {
-        if (Input.GetButtonDown(botao) && podeBater){ //iremos utilizar o input manager neste jogo
-            Debug.Log("Interagiu!");
-            SetInteragiu(true);
+        if (Input.GetButtonDown(botao) && podeBater)
+        { //iremos utilizar o input manager neste jogo
+        Debug.Log("Interagiu!");
+        SetInteragiu(true); //var pra animação?
+        deletaObjetosAoRedor();
+        //animação de quebra de objeto ou desvio
         }
+        else if (Input.GetButtonDown(botao))
+        {
+            Debug.Log("ERROU");
+        }
+        SetInteragiu(false); //Reset Interagiu
     }
 
     public void TomaDano()
@@ -55,14 +64,25 @@ public class Membro : MonoBehaviour
         if (!interagiu)
         {
             Debug.Log("levou Dano");
-            // animação de dano
+            //animação de dano
         }
+    }
+
+    void deletaObjetosAoRedor()
+    {
+        foreach (GameObject item in objtsNoRaio)
+        {
+            Destroy(item);
+        }
+        objtsNoRaio.Clear();
+        SetPodeBater(false);
     }
 
     public void SetPodeBater(bool var)
     {
         podeBater = var;
     }
+
 
     public void SetInteragiu(bool var)
     {
