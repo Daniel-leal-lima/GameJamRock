@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Aturometro : MonoBehaviour
 {
-    public float timer;
+    public float timer, final;
     public int momentoAtual;
 
     [System.Serializable]
@@ -20,9 +20,9 @@ public class Aturometro : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
 
-        if (timer > 1)
+        if (timer > final)
         {
             MomentoFunc(momento[momentoAtual]);
         }
@@ -37,7 +37,7 @@ public class Aturometro : MonoBehaviour
             momento.contadorSpawner = momento.contadorSpawner -1;
         }
 
-        if (momento.tempoMax > timer)
+        if (momento.tempoMax < timer)
         {
             momentoAtual = momentoAtual + 1;
         }

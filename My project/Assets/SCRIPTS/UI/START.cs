@@ -16,5 +16,6 @@ public class START : MonoBehaviour
     void Interagiu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(cena);
+        AudioManager.instance.Play("Musica1");
     }
 }

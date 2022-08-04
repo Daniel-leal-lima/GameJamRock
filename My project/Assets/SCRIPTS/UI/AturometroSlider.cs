@@ -7,7 +7,7 @@ public class AturometroSlider : MonoBehaviour
 {
     public float vida, porcentagem;
     public Slider slider;
-    int max = 10;
+    public int max = 10;
     [SerializeField]
     float progresso;
     private void Start()
@@ -40,6 +40,7 @@ public class AturometroSlider : MonoBehaviour
 
         if (vida <= 0)
         {
+            AudioManager.instance.Stop("Musica1");
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
     }
