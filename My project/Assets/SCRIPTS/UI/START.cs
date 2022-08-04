@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class START : MonoBehaviour
 {
     public Button Botao;
+    public string cena;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class START : MonoBehaviour
 
     void Interagiu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Fase1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(cena);
     }
 }

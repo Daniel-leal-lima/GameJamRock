@@ -9,6 +9,7 @@ public class Membro : MonoBehaviour
 
     public enum myIndex { UM, DOIS, TRES, QUATRO }
     public myIndex selIndex = myIndex.QUATRO;
+    public GameObject slider;
 
     bool podeBater;
     bool interagiu;
@@ -40,7 +41,7 @@ public class Membro : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log(botao);
+        //Debug.Log(botao);
     }
 
     void Interage()
@@ -48,9 +49,9 @@ public class Membro : MonoBehaviour
         if (Input.GetButtonDown(botao) && podeBater)
         { //iremos utilizar o input manager neste jogo
         Debug.Log("Interagiu!");
-        SetInteragiu(true); //var pra animação?
+        SetInteragiu(true); //var pra animaï¿½ï¿½o?
         deletaObjetosAoRedor();
-        //animação de quebra de objeto ou desvio
+        //animaï¿½ï¿½o de quebra de objeto ou desvio
         }
         else if (Input.GetButtonDown(botao))
         {
@@ -63,8 +64,9 @@ public class Membro : MonoBehaviour
     {
         if (!interagiu)
         {
-            Debug.Log("levou Dano");
-            //animação de dano
+            slider.GetComponent<AturometroSlider>().vida = slider.GetComponent<AturometroSlider>().vida -1;
+            
+            // animaï¿½ï¿½o de dano
         }
     }
 
@@ -91,5 +93,18 @@ public class Membro : MonoBehaviour
     public bool GetPodeBater()
     {
         return podeBater;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+            print("AAAAAAA");
+            SetPodeBater(false);
+            TomaDano();
+            objtsNoRaio.Remove(collision.gameObject);
+            Destroy(collision.gameObject);
+            
+        
+        
     }
 }

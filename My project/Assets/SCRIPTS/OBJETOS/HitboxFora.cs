@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class HitboxFora : MonoBehaviour
 {
-    public Membro membro;
+    public GameObject membro;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Pode bater");
-        membro.SetPodeBater(true);
-        membro.objtsNoRaio.Add(collision.gameObject);
+        if (collision.tag == "ObjetoDano")
+        {
+            print("FORAAAAAAAAAAAA");
+            membro.GetComponent<Membro>().SetPodeBater(true);
+            membro.GetComponent<Membro>().objtsNoRaio.Add(collision.gameObject);
+        }
+        
     }
 }

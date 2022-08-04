@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class HitboxDentro : MonoBehaviour
 {
-    public Membro membro;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public GameObject membro;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Não pode mais");
-        membro.SetPodeBater(false);
-        membro.TomaDano();
-        membro.objtsNoRaio.Remove(collision.gameObject);
-        Destroy(collision.gameObject);
+        if (collision.gameObject.tag == "ObjetoDano");
+        {
+            print("AAAAAAA");
+            Debug.Log("Nï¿½o pode mais");
+            membro.GetComponent<Membro>().SetPodeBater(false);
+            membro.GetComponent<Membro>().TomaDano();
+            membro.GetComponent<Membro>().objtsNoRaio.Remove(collision.gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }

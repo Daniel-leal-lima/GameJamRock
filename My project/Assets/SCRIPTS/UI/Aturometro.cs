@@ -26,6 +26,7 @@ public class Aturometro : MonoBehaviour
         {
             MomentoFunc(momento[momentoAtual]);
         }
+        //else ACABAR JOGO
     }
 
     void MomentoFunc (Momento momento)

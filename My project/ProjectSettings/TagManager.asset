@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Objeto
+  - ObjetoDano
   layers:
   - Default
   - TransparentFX
@@ -41,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cenario
+    uniqueID: 2784907239
+    locked: 0
+  - name: Personagens
+    uniqueID: 1292281829
+    locked: 0
+  - name: Cima
+    uniqueID: 3062787371
+    locked: 0
+  - name: UI
+    uniqueID: 1923078043
     locked: 0
