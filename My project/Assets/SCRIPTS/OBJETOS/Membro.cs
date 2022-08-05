@@ -11,6 +11,7 @@ public class Membro : MonoBehaviour
     public myIndex selIndex = myIndex.QUATRO;
     public GameObject slider;
     public string nome;
+    public Animator luz;
 
     bool podeBater;
     bool interagiu;
@@ -50,8 +51,10 @@ public class Membro : MonoBehaviour
         if (Input.GetButtonDown(botao) && podeBater)
         { //iremos utilizar o input manager neste jogo
         Debug.Log("Interagiu!");
-        SetInteragiu(true); //var pra anima��o?
+        luz.SetTrigger("acertou");
+        SetInteragiu(true); //var pra animação?
         deletaObjetosAoRedor();
+        
         //anima��o de quebra de objeto ou desvio
         }
         else if (Input.GetButtonDown(botao))
@@ -66,7 +69,6 @@ public class Membro : MonoBehaviour
         if (!interagiu)
         {
             slider.GetComponent<AturometroSlider>().vida = slider.GetComponent<AturometroSlider>().vida -1;
-            
             // anima��o de dano
         }
     }
