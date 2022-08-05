@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9113696675021414148}
   m_Layer: 0
   m_Name: ObjBaterista
-  m_TagString: ObjetoDano
+  m_TagString: ObjBaterista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,10 +10,11 @@ public class Membro : MonoBehaviour
     public enum myIndex { UM, DOIS, TRES, QUATRO }
     public myIndex selIndex = myIndex.QUATRO;
     public GameObject slider;
+    public string nome;
 
     bool podeBater;
     bool interagiu;
-    string botao;
+    public string botao;
     public HashSet<GameObject> objtsNoRaio = new HashSet<GameObject>();
     private void Start()
     {
@@ -78,6 +79,7 @@ public class Membro : MonoBehaviour
         }
         objtsNoRaio.Clear();
         SetPodeBater(false);
+
     }
 
     public void SetPodeBater(bool var)
