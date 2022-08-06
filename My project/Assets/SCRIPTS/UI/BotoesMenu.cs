@@ -25,4 +25,10 @@ public class BotoesMenu : MonoBehaviour
     {
         //vai pra cena de créditos
     }
+
+    public void RetornaMenu()
+    {
+        TransicaoCenaScript.SetScene(cena);
+        TransicaoCenaScript.AconteceuEvento();
+    }
 }
