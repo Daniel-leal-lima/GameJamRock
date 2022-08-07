@@ -70,6 +70,7 @@ public class Membro : MonoBehaviour
         if (!interagiu)
         {
             slider.GetComponent<AturometroSlider>().vida = slider.GetComponent<AturometroSlider>().vida -1;
+            GetComponent<Animator>().SetTrigger("hurt");
             // anima��o de dano
 
         }
