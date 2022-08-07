@@ -4482,6 +4482,7 @@ MonoBehaviour:
   porcentagem: 0
   slider: {fileID: 1847942815}
   max: 30
+  fill: {fileID: 1601101044}
   progresso: 0
 --- !u!1001 &1853072856
 PrefabInstance:

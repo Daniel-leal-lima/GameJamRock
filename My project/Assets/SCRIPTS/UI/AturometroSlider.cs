@@ -9,33 +9,37 @@ public class AturometroSlider : MonoBehaviour
     public float vida, porcentagem;
     public Slider slider;
     public int max;
+    public GameObject fill;
     [SerializeField]
     float progresso;
+    Image col;
     private void Start()
     {
         vida = max;
+        
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            vida -= 1;
-        }
         progresso = (float) vida / max;
         //Debug.Log("progresso: " + progresso);
         slider.value = progresso;
 
-        if (progresso > 50)
+        float porcentagem = progresso * 100;
+
+        if (porcentagem > 50)
         {
+            fill.GetComponent<Image>().color = Color.green;
             //print("verde");
         }
-        else if (progresso > 25)
+        else if (porcentagem > 25)
         {
+            fill.GetComponent<Image>().color = Color.yellow;
             //print("amarelo");
         }
         else
         {
+            fill.GetComponent<Image>().color = Color.red;
             //print("vermelho");
         }
 
