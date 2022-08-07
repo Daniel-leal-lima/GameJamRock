@@ -3965,7 +3965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0828f53f970464f4491ee14dcc156b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  slider: {fileID: 1847942813}
   siMesmo: {fileID: 1733032732}
   plateia: {fileID: 1969179333}
   normal: {fileID: 21300000, guid: 686cdbbdfad07904f9bb119b05320011, type: 3}

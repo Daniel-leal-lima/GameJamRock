@@ -449,7 +449,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 639414731}
         m_TargetAssemblyTypeName: BotoesMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: RetornaMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

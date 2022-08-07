@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AturometroSlider : MonoBehaviour
 {
     public float vida, porcentagem;
     public Slider slider;
-    public int max = 10;
+    public int max;
     [SerializeField]
     float progresso;
     private void Start()
@@ -41,7 +42,7 @@ public class AturometroSlider : MonoBehaviour
         if (vida <= 0)
         {
             AudioManager.instance.Stop("Musica1");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
