@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Aturometro : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class Aturometro : MonoBehaviour
         {
             MomentoFunc(momento[momentoAtual]);
         }
-        //else ACABAR JOGO
+        else // acaba jogo
+        {
+            SceneManager.LoadScene("Obrigado");
+        }
     }
 
     void MomentoFunc (Momento momento)
