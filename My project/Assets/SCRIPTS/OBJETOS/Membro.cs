@@ -17,6 +17,7 @@ public class Membro : MonoBehaviour
     bool interagiu;
     public string botao;
     public HashSet<GameObject> objtsNoRaio = new HashSet<GameObject>();
+    public GameObject nuvemDano;
     private void Start()
     {
         switch (selIndex)
@@ -70,6 +71,7 @@ public class Membro : MonoBehaviour
         {
             slider.GetComponent<AturometroSlider>().vida = slider.GetComponent<AturometroSlider>().vida -1;
             // anima��o de dano
+
         }
     }
 
@@ -78,6 +80,8 @@ public class Membro : MonoBehaviour
         foreach (GameObject item in objtsNoRaio)
         {
             Destroy(item);
+            GameObject efeito = Instantiate(nuvemDano, item.transform.position, Quaternion.identity);
+            Destroy(efeito, .5f);
         }
         objtsNoRaio.Clear();
         SetPodeBater(false);

@@ -16,12 +16,12 @@ public class AturometroSlider : MonoBehaviour
     private void Start()
     {
         vida = max;
-        
+
     }
     // Update is called once per frame
     void Update()
     {
-        progresso = (float) vida / max;
+        progresso = (float)vida / max;
         //Debug.Log("progresso: " + progresso);
         slider.value = progresso;
 
