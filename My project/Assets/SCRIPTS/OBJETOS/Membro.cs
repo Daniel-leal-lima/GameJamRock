@@ -18,6 +18,7 @@ public class Membro : MonoBehaviour
     public string botao;
     public HashSet<GameObject> objtsNoRaio = new HashSet<GameObject>();
     public GameObject nuvemDano;
+
     private void Start()
     {
         switch (selIndex)
@@ -78,20 +79,32 @@ public class Membro : MonoBehaviour
 
     void deletaObjetosAoRedor()
     {
-        foreach (GameObject item in objtsNoRaio)
-        {
-            Destroy(item);
-            GameObject efeito = Instantiate(nuvemDano, item.transform.position, Quaternion.identity);
-            Destroy(efeito, .5f);
+        if (objtsNoRaio.Count > 0) {
+            foreach (GameObject item in objtsNoRaio)
+            {
+                CriaEfeito(item);
+            }
+            objtsNoRaio.Clear();
+            SetPodeBater(false);
         }
-        objtsNoRaio.Clear();
-        SetPodeBater(false);
-
     }
 
     public void SetPodeBater(bool var)
     {
         podeBater = var;
+    }
+
+    public void CriaEfeito(GameObject valorItem)
+    {
+        try
+        {
+            Instantiate(nuvemDano, valorItem.transform.position, valorItem.transform.rotation);
+            Destroy(valorItem);
+        }
+        catch(Exception e)
+        {
+            Debug.Log(e);
+        }
     }
 
 

@@ -13,17 +13,17 @@ public class HitboxFora : MonoBehaviour
             membro.GetComponent<Membro>().SetPodeBater(true);
             membro.GetComponent<Membro>().objtsNoRaio.Add(collision.gameObject);
         }
-        if(collision.tag == "ObjSolo" && membro.GetComponent<Membro>().botao == "Fire2" && membro.GetComponent<Membro>().nome == "Solo")
+        if(collision.tag == "ObjBaterista" && membro.GetComponent<Membro>().botao == "Fire2" && membro.GetComponent<Membro>().nome == "Baterista")
+        {
+            membro.GetComponent<Membro>().SetPodeBater(true);
+            membro.GetComponent<Membro>().objtsNoRaio.Add(collision.gameObject);
+        }
+        if(collision.tag == "ObjSolo" && membro.GetComponent<Membro>().botao == "Fire3" && membro.GetComponent<Membro>().nome == "Solo")
         {
             membro.GetComponent<Membro>().SetPodeBater(true);
             membro.GetComponent<Membro>().objtsNoRaio.Add(collision.gameObject);
         }
         if(collision.tag == "ObjGuitarrista" && membro.GetComponent<Membro>().botao == "Fire4" && membro.GetComponent<Membro>().nome == "Guitarrista")
-        {
-            membro.GetComponent<Membro>().SetPodeBater(true);
-            membro.GetComponent<Membro>().objtsNoRaio.Add(collision.gameObject);
-        }
-        if(collision.tag == "ObjBaterista" && membro.GetComponent<Membro>().botao == "Fire3" && membro.GetComponent<Membro>().nome == "Baterista")
         {
             membro.GetComponent<Membro>().SetPodeBater(true);
             membro.GetComponent<Membro>().objtsNoRaio.Add(collision.gameObject);

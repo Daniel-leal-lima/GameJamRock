@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9079180722940407864}
   - component: {fileID: 3178524308744657108}
+  - component: {fileID: 7117679518849001073}
   m_Layer: 0
   m_Name: brilho
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7117679518849001073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623849735717247322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72875d5654b68894faf2a37b2f5c892c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 6623849735717247322}

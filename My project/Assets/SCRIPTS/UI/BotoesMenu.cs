@@ -32,4 +32,11 @@ public class BotoesMenu : MonoBehaviour
         TransicaoCenaScript.SetScene(cena);
         TransicaoCenaScript.AconteceuEvento();
     }
+
+    public void Obrigado()
+    {
+        TransicaoCenaScript.SetScene(cena);
+        TransicaoCenaScript.AconteceuEvento();
+    }
+
 }
