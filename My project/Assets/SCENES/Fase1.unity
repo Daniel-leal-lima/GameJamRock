@@ -2989,7 +2989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1683737583908152147, guid: ceecdfe5ed1027d4082cedf557ccbcdc, type: 3}
       propertyPath: m_Size.x
-      value: 1.9302691
+      value: 2.0250795
       objectReference: {fileID: 0}
     - target: {fileID: 1683737583908152147, guid: ceecdfe5ed1027d4082cedf557ccbcdc, type: 3}
       propertyPath: m_Size.y
@@ -2997,7 +2997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1683737583908152147, guid: ceecdfe5ed1027d4082cedf557ccbcdc, type: 3}
       propertyPath: m_Offset.x
-      value: 0.4230351
+      value: 0.4704406
       objectReference: {fileID: 0}
     - target: {fileID: 1683737583908152147, guid: ceecdfe5ed1027d4082cedf557ccbcdc, type: 3}
       propertyPath: m_Offset.y
@@ -3225,7 +3225,7 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
-    - 400
+    - 300
     - 0
     - 0
     - 0
@@ -3237,10 +3237,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
-    - 500
+    - 400
     - 0
     - 0
-    - 500
+    - 400
     tempoMax: 25
     spawner:
     - {fileID: 120358837}
@@ -3249,10 +3249,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
+    - 300
+    - 0
+    - 0
     - 400
-    - 0
-    - 0
-    - 500
     tempoMax: 40
     spawner:
     - {fileID: 120358837}
@@ -3261,10 +3261,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
-    - 400
+    - 300
     - 0
-    - 600
     - 500
+    - 400
     tempoMax: 57
     spawner:
     - {fileID: 120358837}
@@ -3274,7 +3274,7 @@ MonoBehaviour:
     contadorSpawner: 3
   - max:
     - 0
-    - 500
+    - 400
     - 0
     - 0
     tempoMax: 64
@@ -3285,10 +3285,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
+    - 500
     - 600
+    - 500
     - 700
-    - 600
-    - 800
     tempoMax: 70
     spawner:
     - {fileID: 120358837}
@@ -3309,10 +3309,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
+    - 600
+    - 600
     - 700
     - 700
-    - 800
-    - 800
     tempoMax: 81
     spawner:
     - {fileID: 120358837}
@@ -3321,10 +3321,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
+    - 600
+    - 600
+    - 600
     - 700
-    - 700
-    - 700
-    - 800
     tempoMax: 98
     spawner:
     - {fileID: 120358837}
@@ -3345,10 +3345,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
+    - 600
     - 700
-    - 800
+    - 600
     - 700
-    - 800
     tempoMax: 128
     spawner:
     - {fileID: 120358837}
@@ -3369,10 +3369,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 2
   - max:
-    - 600
-    - 600
-    - 600
-    - 600
+    - 500
+    - 500
+    - 500
+    - 500
     tempoMax: 161
     spawner:
     - {fileID: 120358837}
@@ -3381,10 +3381,10 @@ MonoBehaviour:
     - {fileID: 1629539027}
     contadorSpawner: 3
   - max:
-    - 700
     - 600
-    - 700
-    - 700
+    - 500
+    - 600
+    - 600
     tempoMax: 175
     spawner:
     - {fileID: 120358837}
